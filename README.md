@@ -3,7 +3,7 @@ A simple Image and Exif Viewer implemented in PyQt5 and Qt Designer. The impleme
 
 ## Environment and packages
 
-In the following paragraph some steps to recreate a usable environment are explained. Conda and Pip package manager with Python 3.9 have been used. 
+In the following paragraph some steps to recreate a usable environment are explained. Conda and Pip package manager, with Python 3.9.7 have been used. 
 
 - A usable conda environment can be directly created from the requirements_conda.txt file, using the command:
     
@@ -48,7 +48,7 @@ The following features have been implemented:
 * **Image visualization**: the user can open JPEG and PNG images, one at a time. Support for **multiple image** visualization is added, through the presence of a List Widget. Switch among the images can be performed using arrow keys.
 
 * **Image rescaling**: when the user
-resizes the application, the user interface and the image scale appropriately, considering a maximum dimension (height or width) of 512 pixels.
+resizes the application, the interface and the image scale appropriately, considering a maximum dimension (height or width) of 512 pixels for the image.
 
 * **Image rotation**: the user can rotate the selected image clockwise and counterclockwise, with 90 degrees increments.
 

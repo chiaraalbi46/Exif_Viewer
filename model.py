@@ -45,7 +45,7 @@ class Model:
         return self.exif
 
     def extract_general_info(self, image):
-        """ Extract general info from image """
+        """ Extract general info from an image """
 
         self.info = {}
         try:
@@ -62,7 +62,7 @@ class Model:
             print('Error with image')
 
     def get_general_info(self):
-        """ Return general info of image """
+        """ Return general info of an image """
 
         return self.info
 
@@ -106,7 +106,7 @@ class Model:
         return lat, lon
 
     def fill_list(self, image):
-        """ Insert image in list """
+        """ Insert image in the list """
 
         for i in self.images:
             if i == image:
@@ -114,7 +114,7 @@ class Model:
         self.images.append(image)
 
     def get_element(self, position):
-        """ Returns element of list at certain position """
+        """ Returns an element of the list at a certain position """
 
         current_element = self.images[position]
         self.update(current_element)
@@ -125,7 +125,8 @@ class Model:
         del self.images[:]
 
     def delete_element(self, position):
-        """ Delete image from list at certain position. If image deleted is main image update the model """
+        """ Delete an image from the list at a certain position.
+        If the image is deleted is the current image on the viewer, the model is updated """
 
         if self.images[position] == self.current_image:
             self.update("")

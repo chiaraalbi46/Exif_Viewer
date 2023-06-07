@@ -283,7 +283,7 @@ class ImageListView(QListWidget):
     """ Custom Widget to list of images """
 
     def __init__(self, parent=None):
-        """ Set several parameters and reference to parent, model and viewer """
+        """ Set several parameters and the references to the parent, the model and the viewer """
 
         QListWidget.__init__(self, parent)
         self.setIconSize(QSize(80, 80))
@@ -306,7 +306,7 @@ class ImageListView(QListWidget):
         self.viewer = viewer
 
     def populate(self):
-        """ Fill the list of images and set itself to viewer """
+        """ Fill the list of images and set itself to the viewer """
 
         # clear the list (case of repopulating)
         self.clear()
@@ -325,7 +325,7 @@ class ImageListView(QListWidget):
         self.viewer.set_viewer_list(self)
 
     def upload_image(self):
-        """ If double click on image in list the image will displayed in main viewer. Update the view """
+        """ If double click on an image of the list it will be displayed in the main viewer. Update the view """
 
         if self.viewer.rotation:
             self.viewer.rotation = False
@@ -340,7 +340,7 @@ class ImageListView(QListWidget):
             self.parent.right.setEnabled(True)
 
     def enable_delete_button(self):
-        """ Activate button to remove an image from list and set the current image clicked in list """
+        """ Activate buttons to remove an image from the list and set the current image clicked in the list """
 
         self.parent.deleteItem.setEnabled(True)
         self.current_item = self.currentRow()
@@ -370,7 +370,7 @@ class ImageListView(QListWidget):
         self.viewer.update()
 
     def clear_list(self):
-        """ Empty the list and update model and view """
+        """ Empty the list and update the model and the viewer """
 
         self.model.empty_list()
         self.model.update("")
